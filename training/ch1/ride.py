@@ -22,7 +22,7 @@ with open("ride.in", "r") as fIn, open ("ride.out", "w") as fOut:
     groupCode = groupCode % 47
 
     if cometCode == groupCode:
-        fOut.write("GO/n")
+        fOut.write("GO\n")
     else:
-        fOut.write("STAY/n")
+        fOut.write("STAY\n")
 
