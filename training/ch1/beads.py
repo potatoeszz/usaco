@@ -19,8 +19,11 @@ def findCutPoints():
             cutPoints.append(i)
     return cutPoints
 
-
-def collectLeft(cp):
+def collectBeads(cp, fromLeft):
+    if fromLeft:
+        ra = range(cp, 0, -1)
+    else:
+        ra = range(cp + 1, len(beads), 1)
     wCount = 0
     rCount = 0
     bCount = 0
@@ -38,6 +41,12 @@ def collectLeft(cp):
             else:
                 bCount += 1
     return wCount + rCount + bCount
+
+def collectLeft(cp):
+    return collectBeads(cp, True)
+
+def CollectRight(cp):
+    return collectBeads(cp, False)
 
 def collectRight(cp):
     wCount = 0
