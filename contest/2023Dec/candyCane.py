@@ -18,12 +18,7 @@ for i in range(M): # loop for candies
     for j in range(N): # loop for cows
         cowHeight = cows[j]
         
-        amountEaten = 0
-        if cowHeight > candyBase:
-            if cowHeight < candyHeight:
-                amountEaten = cowHeight - candyBase
-            else:
-                amountEaten = candyHeight - candyBase
+        amountEaten = eat(cowHeight, candyHeight, candyBase)
 
         cows[j] += amountEaten
         candyBase += amountEaten
