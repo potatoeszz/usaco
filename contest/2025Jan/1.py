@@ -1,6 +1,3 @@
-#import sys
-#sys.stdin = open('1.in')
-
 def solve(N, sky, A, B):
     res = 0
     if A == 0 and B == 0:
