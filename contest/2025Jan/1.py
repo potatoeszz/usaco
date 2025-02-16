@@ -1,5 +1,5 @@
-import sys
-sys.stdin = open('1.in')
+#import sys
+#sys.stdin = open('1.in')
 
 def solve(N, sky, A, B):
     res = 0
