@@ -1,5 +1,5 @@
-# import sys
-# sys.stdin = open('2.in')
+#import sys
+#sys.stdin = open('2.in')
 
 N = int(input().strip())
 a = [int(e) for e in input().strip().split()]
@@ -8,15 +8,27 @@ times = [0] * (N + 1)
 for n in a:
     times[n] += 1
 
+
+op1 = 0
 for i in range(N + 1):
     ans = 0
     mex = i
-    for j in range(mex):
-        if times[j] == 0:
-            ans += 1
 
-    if mex in a:
-        if ans < times[mex]:
-            ans = times[mex]
+    if times[mex] > op1:
+        ans = times[mex]
+    else:
+        ans = op1
+
+    if times[mex] == 0:
+        op1 += 1
+
+# og solution
+#    for j in range(mex):
+#        if times[j] == 0:
+#            ans += 1
+
+#    if mex in a:
+#        if ans < times[mex]: #
+#            ans = times[mex]
 
     print(ans)
